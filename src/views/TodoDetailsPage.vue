@@ -76,7 +76,7 @@ const errorMessage = computed(() => {
     }
   }
   
-  return error.value.message || 'Failed to load todo details.'
+  return (error.value as Error).message || 'Failed to load todo details.'
 })
 </script>
 
